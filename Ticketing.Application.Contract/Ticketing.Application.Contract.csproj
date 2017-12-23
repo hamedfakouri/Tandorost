@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C46CD285-7500-4555-B4B6-6A944839AC81}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ticketing.Application.Contract</RootNamespace>
+    <AssemblyName>Ticketing.Application.Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Department\DepartmentDto.cs" />
+    <Compile Include="Department\DepartmentList.cs" />
+    <Compile Include="Department\IDepartmentService.cs" />
+    <Compile Include="Groups\IGroupService.cs" />
+    <Compile Include="LogTicket\AllUsersLogDto.cs" />
+    <Compile Include="LogTicket\ILogTicketService.cs" />
+    <Compile Include="LogTicket\ListAllUsersLogDto.cs" />
+    <Compile Include="LogTicket\LogTicketDto.cs" />
+    <Compile Include="TicketsCartable\TicketCartableDTO.cs" />
+    <Compile Include="TicketsCartable\ITicketCartableService.cs" />
+    <Compile Include="TicketsCartable\ReferralTicketCartableDto.cs" />
+    <Compile Include="TicketsCartable\ListTicketCartableDto.cs" />
+    <Compile Include="Tickets\CloseTicketDto.cs" />
+    <Compile Include="Tickets\CommentAttachmentDto.cs" />
+    <Compile Include="Tickets\ListCommentAttachmentDto.cs" />
+    <Compile Include="Tickets\ListCommentDto.cs" />
+    <Compile Include="Tickets\CommentDto.cs" />
+    <Compile Include="Tickets\CreateTicketDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tickets\ITicketService.cs" />
+    <Compile Include="Tickets\ListTicketDto.cs" />
+    <Compile Include="Tickets\MarkAsReadTicketDto.cs" />
+    <Compile Include="Tickets\RegisterCommentDto.cs" />
+    <Compile Include="Tickets\TicketDto.cs" />
+    <Compile Include="Users\AssignDepartmentToUserDto.cs" />
+    <Compile Include="Users\CreateUserDto.cs" />
+    <Compile Include="Users\IUserService.cs" />
+    <Compile Include="Users\GetUserDto.cs" />
+    <Compile Include="Users\ListGetUserDto.cs" />
+    <Compile Include="Users\UserDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.CastleWindsor\Framework.CastleWindsor.csproj">
+      <Project>{793A4D03-38BD-49CD-991C-10482A9D8F68}</Project>
+      <Name>Framework.CastleWindsor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Core\Framework.Core.csproj">
+      <Project>{3BB5EC68-04F2-4561-91B3-A4952064098E}</Project>
+      <Name>Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.DataAccess.EF\Framework.DataAccess.EF.csproj">
+      <Project>{262DA4F7-F33F-4FAF-AEE3-C478FDBD75D8}</Project>
+      <Name>Framework.DataAccess.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Domain\Framework.Domain.csproj">
+      <Project>{C412B00F-F59C-493A-9BBC-58074F8A07C1}</Project>
+      <Name>Framework.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ticketing.Domain\Ticketing.Domain.csproj">
+      <Project>{245E050E-97BC-49F0-ACD9-140B7D571400}</Project>
+      <Name>Ticketing.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ticketing.Persistence.EF\Ticketing.Persistence.EF.csproj">
+      <Project>{8153374B-2DBC-4605-9298-F50CF5BCD8FA}</Project>
+      <Name>Ticketing.Persistence.EF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

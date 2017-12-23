@@ -1,0 +1,17 @@
+﻿@using System.Web.Optimization
+@model Ticketing.Interface.WebUI.Models.IndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    //angular.module("AppModule").constant("serviceUrl",@Model.ServiceHostUrl)
+</script>
+<app>
+    Loading...
+</app>
+
+@section scripts{
+    @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/bundles/Ticketing/scripts/app")
+}

@@ -1,0 +1,45 @@
+﻿<div>
+    <nav>
+        <ticketing-nav></ticketing-nav>
+    </nav>
+
+    <div>
+        <table class="table table-bordered">
+            <ng-container *ngFor="let item of ticketComment; let i = index;">
+                <tr [ngClass]="{'rtl':item.UserId !=item.CurrntUserId }">
+                    <td>{{i}}</td>
+                    <td>{{item.UserId}}</td>
+                    <td>{{item.Id}}</td>
+                    <td>{{item.Comment}}</td>
+                    <td>{{item.FirstName}}</td>
+                    <td>{{item.LastName}}</td>
+                    <td>{{item.DateTime}}</td>
+                    <td>
+                        <ng-container *ngFor="let img of item.CommentAttachments">
+                            <div >
+                                <a (click)="imgSrc=img.FileUri;showImgModal.show();">
+                                    View Attachments
+                                </a>
+                            </div>
+                        </ng-container>
+
+                    </td>
+                </tr>
+            </ng-container>
+        </table>
+    </div>
+
+    Enter Your Commnet:
+
+
+
+    <input type="text" name="comment" [(ngModel)]="comment.Comment" />
+    <br />
+    <fileupload name="fileUploader" (onUploadUri)="getFileName($event)"></fileupload>
+    <button type="button" name="commentBtn" (click)="writeComment()">Register Comment</button>
+
+
+
+</div>
+
+

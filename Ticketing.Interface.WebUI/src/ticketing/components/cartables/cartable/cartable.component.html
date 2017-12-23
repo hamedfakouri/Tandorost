@@ -1,0 +1,35 @@
+﻿<div>
+    <nav>
+        <ticketing-nav></ticketing-nav>
+    </nav>
+    <table class="table table-bordered">
+        <ng-container *ngFor="let item of cartable; let i = index;">
+            <tr >
+                <td>{{i}}</td>
+                <td>{{item.Id}}</td>
+                <td>{{item.SenderFirstName}}</td>
+                <td>{{item.SenderLastName}}</td>
+                <td>{{item.Comment}}</td>
+                <td>{{item.DateTime}}</td>
+                <td>{{item.TicketState}}</td>
+                <td>
+                    <a [routerLink]="['/ViewTicketComments',item.Id]"
+                       routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        View Comments
+                    </a>
+                </td>
+                <td has-permission="ReferralTicketCartable">
+                    <button type="button"   name="referralBtn" (click)="showMyDepartmentEmployeeForReferral(item.Id);MyDepartmentEmployee.show();">Referral</button>
+                </td>
+                <td has-permission="CloseTicket">
+                    <button type="button"  name="CloseTicketBtn" (click)="changeStateTicketToClose(item.Id)">Close Ticket</button>
+                </td>
+                <td has-permission="DeleteTicket">
+                    <button type="button"  name="deleteBtn" (click)="delete(item.Id)">Delete</button>
+                </td>
+            </tr>
+        </ng-container>
+    </table>
+</div>
+
+
