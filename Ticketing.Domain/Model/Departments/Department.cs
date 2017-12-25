@@ -20,4 +20,5 @@ namespace Ticketing.Domain.Model.Departments
     }
 
 
+
 }

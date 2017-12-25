@@ -66,4 +66,9 @@ export class InterceptedHttp extends Http {
 
         return this._token;
     }
+
+    unAthorize(): void {
+
+
+    }
 }

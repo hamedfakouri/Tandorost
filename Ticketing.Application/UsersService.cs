@@ -122,8 +122,10 @@ namespace Ticketing.Application
 
         public List<string> GetUserPermission()
         {
-            var userId = long.Parse(ClaimHelper.GetUserId());
-            var permissions = _userRepository.GetUserPermissionBy(userId);
+            long Id = 0;
+            long.TryParse(ClaimHelper.GetUserId(),out Id);
+
+            var permissions = _userRepository.GetUserPermissionBy(Id);
             return permissions.ToList();
         }
     }

@@ -27,8 +27,7 @@ namespace Framework.Core.Security
                 if (claim != null)
                     userId = claim.Value;
                     return userId;
-            }
-          
+            }         
                 return userId;
         }
 

@@ -24,7 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
     <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -177,6 +177,7 @@
     <Content Include="src\index.html" />
     <Content Include="src\meta\humans.txt" />
     <Content Include="src\meta\robots.txt" />
+    <Content Include="src\shared\components\login.component.html" />
     <Content Include="src\styles\headings.css" />
     <Content Include="src\ticketing\components\cartables\cartable\cartable.component.css" />
     <Content Include="src\ticketing\components\cartables\cartable\cartable.component.html" />
@@ -237,6 +238,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="src\app\components\app.component.html" />
+    <TypeScriptCompile Include="src\shared\app.service.ts" />
+    <TypeScriptCompile Include="src\shared\components\index.ts" />
+    <TypeScriptCompile Include="src\shared\components\login.component.ts" />
+    <TypeScriptCompile Include="src\shared\services\index.ts" />
+    <TypeScriptCompile Include="src\shared\services\user.service.ts" />
+    <TypeScriptCompile Include="src\shared\shared.module.ts" />
     <TypeScriptCompile Include="src\ticketing\baseHttp.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
     <TypeScriptCompile Include="src\ticketing\baseTicketingService.ts" />

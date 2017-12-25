@@ -20,5 +20,7 @@ namespace Ticketing.Interface.WebUI.Controllers
             var res = new IndexViewModel().ServiceHostUrl;
             return Json(res, JsonRequestBehavior.AllowGet);
         }
+
+
     }
 }

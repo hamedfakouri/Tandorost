@@ -66,7 +66,6 @@ export class BaseHttp {
         this.tokenValue = this.cookieService.get('token');
         this.tokenType = this.cookieService.get('tokenType');
         this._token = this.tokenType + " " + this.tokenValue;
-
         return this._token;
     }
 }

@@ -5,7 +5,9 @@ import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class PermissionResolver implements Resolve<any> {
-    constructor(private securityService: SecurityService) { }
+    constructor(private securityService: SecurityService) {
+
+    }
 
     resolve(route: ActivatedRouteSnapshot): Observable<any> {
         debugger;
