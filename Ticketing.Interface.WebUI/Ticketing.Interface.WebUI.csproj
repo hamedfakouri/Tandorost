@@ -179,21 +179,6 @@
     <Content Include="src\meta\robots.txt" />
     <Content Include="src\shared\components\login.component.html" />
     <Content Include="src\styles\headings.css" />
-    <Content Include="src\ticketing\components\cartables\cartable\cartable.component.css" />
-    <Content Include="src\ticketing\components\cartables\cartable\cartable.component.html" />
-    <Content Include="src\ticketing\components\departments\createDepartment\departmentList.component.css" />
-    <Content Include="src\ticketing\components\departments\createDepartment\departmentList.component.html" />
-    <Content Include="src\ticketing\components\nav\nav.component.html" />
-    <Content Include="src\ticketing\components\home\home.component.html" />
-    <Content Include="src\ticketing\components\permissions\assignPermission.component.css" />
-    <Content Include="src\ticketing\components\permissions\assignPermission.component.html" />
-    <Content Include="src\ticketing\components\tickets\comment\Attachments\attachmentComment.component.html" />
-    <Content Include="src\ticketing\components\tickets\comment\ticketComment.component.css" />
-    <Content Include="src\ticketing\components\tickets\comment\ticketComment.component.html" />
-    <Content Include="src\ticketing\components\tickets\fileupload\fileupload.component.css" />
-    <Content Include="src\ticketing\components\tickets\fileupload\fileupload.component.html" />
-    <Content Include="src\ticketing\components\tickets\registerTicket\ticket.component.css" />
-    <Content Include="src\ticketing\components\tickets\registerTicket\ticket.component.html" />
     <Content Include="Web.config" />
     <Content Include="webpack.config.js" />
   </ItemGroup>
@@ -224,8 +209,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="src\ticketing\components\app.component.ts.orig" />
-    <Content Include="src\ticketing\package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -244,46 +227,13 @@
     <TypeScriptCompile Include="src\shared\services\index.ts" />
     <TypeScriptCompile Include="src\shared\services\user.service.ts" />
     <TypeScriptCompile Include="src\shared\shared.module.ts" />
-    <TypeScriptCompile Include="src\ticketing\baseHttp.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
-    <TypeScriptCompile Include="src\ticketing\baseTicketingService.ts" />
     <TypeScriptCompile Include="src\app\components\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\app.resolver.ts" />
     <TypeScriptCompile Include="src\app\app.routes.ts" />
     <TypeScriptCompile Include="src\app\app.service.ts" />
-    <TypeScriptCompile Include="src\app\http.factory.ts" />
     <TypeScriptCompile Include="src\app\http.interceptor.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\cartables\cartableService.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\cartables\cartable\cartable.component.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\departments\createDepartment\departmentList.component.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\departments\departmentService.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\nav\nav.component.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\home\home.component.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\index.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\cartables\cartable.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\departments\department.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\closeTicketDto.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\createTicketComment.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\getTicketDto.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\listCommentAttachment.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\markAsReadTicket.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\ticket.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\ticketAttachment.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\ticketComment.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\ticketPriority.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\tickets\ticketState.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\models\users\users.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\permissions\assignPermission.component.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\tickets\comment\Attachments\attachmentComment.component.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\tickets\comment\ticketComment.component.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\tickets\fileupload\fileupload.component.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\tickets\registerTicket\ticket.component.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\tickets\ticketService.ts" />
-    <TypeScriptCompile Include="src\ticketing\components\users\usersService.ts" />
-    <TypeScriptCompile Include="src\ticketing\directives\hasPermission.ts" />
-    <TypeScriptCompile Include="src\ticketing\index.ts" />
-    <TypeScriptCompile Include="src\ticketing\ITicketingService\ITicketingService.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\components\home\home.component.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
@@ -293,9 +243,6 @@
     <TypeScriptCompile Include="src\main.browser.aot.ts" />
     <TypeScriptCompile Include="src\main.browser.ts" />
     <TypeScriptCompile Include="src\polyfills.browser.ts" />
-    <TypeScriptCompile Include="src\ticketing\permissionResolver.ts" />
-    <TypeScriptCompile Include="src\ticketing\securityService.ts" />
-    <TypeScriptCompile Include="src\ticketing\ticketing.module.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

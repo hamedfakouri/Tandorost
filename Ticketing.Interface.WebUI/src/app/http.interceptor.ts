@@ -4,7 +4,7 @@ import {Observable} from "rxjs/Rx";
 import { environment } from "../environments/environment";
 import { StartupService } from './startupService'
 import { CookieService } from 'ngx-cookie-service'
-import { BaseTicketingService } from './../ticketing/baseTicketingService'
+//import { BaseTicketingService } from './../ticketing/baseTicketingService'
 @Injectable()
 export class InterceptedHttp extends Http {
     private _token: any;
@@ -12,11 +12,15 @@ export class InterceptedHttp extends Http {
     tokenValue = 'UNKNOWN';
     tokenType = 'UNKNOWN';
 
+    //constructor(backend: ConnectionBackend, defaultOptions: RequestOptions
+    //    , private cookieService: CookieService, private baseService: BaseTicketingService) {
+    //    super(backend, defaultOptions);
+    //}
+
     constructor(backend: ConnectionBackend, defaultOptions: RequestOptions
-        , private cookieService: CookieService, private baseService: BaseTicketingService) {
+        , private cookieService: CookieService) {
         super(backend, defaultOptions);
     }
-
     get(url: string, options?: RequestOptionsArgs): Observable<Response> {
         url = this.updateUrl(url);
 
@@ -41,8 +45,10 @@ export class InterceptedHttp extends Http {
     
     private updateUrl(req: string) {
 
-        var res = this.baseService.getserviceUrl() + req;
-        return res;
+        //var res = this.baseService.getserviceUrl() + req;
+        //return res;
+
+        return "";
     }
 
     private getRequestOptionArgs(options?: RequestOptionsArgs) : RequestOptionsArgs {

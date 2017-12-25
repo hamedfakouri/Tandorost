@@ -5,7 +5,7 @@ import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularcla
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { HttpModule, Http, XHRBackend, RequestOptions, } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BaseTicketingService } from './../ticketing/baseTicketingService';
+//import { BaseTicketingService } from './../ticketing/baseTicketingService';
 import { CookieService } from 'ngx-cookie-service';
 /*
  * Platform and Environment providers/directives/pipes
@@ -22,8 +22,8 @@ import { httpFactory } from "./http.factory";
 import {
     HomeComponent, NoContentComponent
     } from './components';
-import { UsersService } from './../ticketing/components/users/usersService';
-import { TicketingModule } from './../ticketing/ticketing.module';
+//import { UsersService } from './../ticketing/components/users/usersService';
+//import { TicketingModule } from './../ticketing/ticketing.module';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -41,9 +41,9 @@ type StoreType = {
 };
 
 
-export function usersServiceFactory(usersService: UsersService): Function {
-    return () => usersService.checkIfUserIsNotRegigteredThenRegisterUser();
-}
+//export function usersServiceFactory(usersService: UsersService): Function {
+//    return () => usersService.checkIfUserIsNotRegigteredThenRegisterUser();
+//}
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
@@ -66,8 +66,9 @@ export function usersServiceFactory(usersService: UsersService): Function {
         HttpModule,
         //Ng2BootstrapModule,
         //ModalModule.forRoot(),
-        RouterModule.forRoot(ROUTES, { useHash: true }),
-        TicketingModule
+        RouterModule.forRoot(ROUTES)
+        
+        //TicketingModule
     ],
     exports: [RouterModule],
 
