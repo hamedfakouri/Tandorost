@@ -11,6 +11,9 @@ export const ROUTES: Routes = [
     { path: '', component: HomeComponent },
     { path: 'index',  component: HomeComponent },
     { path: 'home', component: HomeComponent },
+    { path: 'user/login', loadChildren: './../shared/shared.module#SharedModule' }
+
+
     //{ path: '**', component: NoContentComponent }
   
 ];
